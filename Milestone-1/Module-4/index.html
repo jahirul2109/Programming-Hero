@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style/nav.css">
+<style>
+    label {
+        display: block;
+        margin: 10px;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="../Module-1/image.html">Photo</a></li>
+            <li><a href="index.html">Form</a></li>
+            <li><a href="../Module-2/css-basic/index.html">Blog</a></li>
+            <li><a href="table.html">Table</a></li>
+        </ul>
+        </nav>
+        <h3>
+        Please Fillup Information 
+        </h3>
+        
+    </header>
+    <main>
+        <section>
+            <form action="">
+                <label for="name"> Name : <input type="text"  id="name" placeholder="Enter Your Name"></label>
+                <label for="email"> Email : <input type="email"  id="email" placeholder="Enter Your Mail"></label>
+                <label for="number"> Number : <input type="number"  id="number" placeholder="Enter Your Number"></label>
+
+                <fieldset>
+                    <legend>Chose Your Petha</legend>
+                    <label for="chitoi"><input type="checkbox" name="pitha" id="chitoi"> Chitoi</label>
+                    <label for="vapa"> <input type="checkbox" name="pitha" id="vapa">Vapa</label>
+                    <label for="patisapta"><input type="checkbox" name="pitha" id="patisapta">Patisapta</label>
+                </fieldset>
+                <fieldset> 
+                    <legend>Pick One or More Bortha </legend>
+                    <label for="sutki"><input type="radio" name="vorta" id="sutki"> Sutki </label>
+                    <label for="sorisa"><input type="radio" name="vorta" id="sorisa"> Sorisa </label>
+                    <label for="lal"><input type="radio" name="vorta" id="lal"> lal moric </label>
+                    <label for="donia"><input type="radio" name="vorta" id="donia"> donia </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Special Inctrution </legend>
+                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                </fieldset>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
