@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.work-sans {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color : rgba(255, 144, 14, 0.1);
+    --dark-3-color : rgba(114, 114, 114, 1);
+}
+.heading-title {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+.discrip {
+    color: var(--dark-3-color);
+    font-size: 1rem;
+    line-height: 25px;
+    font-weight: 500;
+}
+/* paimary button */
+.btn {
+    padding: 15px 15px;
+    color: white;
+    background-color:#FF900E;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover {
+    transition: background-color 0.4s ease-in;
+    background-color: white;
+    border: 1px solid rgba(255, 144, 14, 1);
+    color: #FF900E; 
+    padding: calc(15px - 1px );
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+.hidden {
+    display: none;
+}
+header {
+    background-color: var(--bg-color);
+}
+/* Width set */
+nav , #brand ,#team , #features , #dashborad ,#sponser, footer{
+    width: 75%;
+    margin: 0 auto;
+}
+/* Nav-bar start */
+.logo {
+    width: 45px;
+}
+.logo img {
+    width: 100%;
+    border-radius: 50px;
+}
+#nav .name a {
+ text-decoration: none;
+ color: #000000;
+}
+#nav ,.details{
+    padding: 50px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-ul {
+    list-style: none;
+    gap: 30px;
+    justify-content: space-between;
+}
+.nav-ul a {
+    text-decoration: none;
+    color:  rgba(66, 66, 66, 1);
+    font-weight: 600;
+}
+
+/* banner start */
+#brand .title {
+    font-size: 3.5rem;
+    font-weight: bold;
+
+}
+#brand img , .photo-container img , .photo img {
+    width: 100%;
+}
+#brand, .details,.details-2, .features , .heading{
+    flex-direction: column;
+}
+.details {
+    text-align: center;
+    gap: 20px;
+}
+#brand {
+    padding-bottom: 50px ;
+}
+
+/* Team Section Start */
+#team {
+    justify-content: space-between;
+    gap: 50px;
+    padding: 0 50px;
+    margin: 100px auto;
+}
+.photo-container, .features, .photo , #features .details-2 {
+    width: 50%;
+}
+.photo-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.features {
+    justify-content: center;
+    gap: 20px;
+}
+#quick {
+    font-weight: 500;
+    color: var(--dark-3-color);
+}
+#feature {
+    color: #FF900E;
+}
+
+/* Features Section Start */
+#features {
+    gap: 100px;
+}
+.details-2 {
+    gap: 30px;
+}
+.caption {
+    border-left: 4px solid #FF900E;
+    padding: 0 20px;
+}
+.heading {
+    gap: 10px;
+}
+.point-container {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.point {
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 1);
+}
+.point-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.point-dis {
+    margin-top: 10px;
+    line-height: 16px;
+}
+.year {
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+.Experience {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.photo .btn {
+    margin-top: -100px;
+    margin-left: -80px;
+}
+
+/* Dashborad Section Start */
+#dashborad {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+#dashborad .card-container {
+    display: flex;
+    justify-content: space-around;
+
+}
+#dashborad .card {
+    border: 1px solid rgba(255, 144, 14, 1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    gap: 10px;
+}
+#dashborad .card img {
+    width: 100%;
+}
+.digit {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgba(66, 66, 66, 1);
+}
+#dashborad .discrip {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark-3-color);
+
+}
+
+/* Sponsors Section Start */
+#sponser {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#heading {
+    text-align: center;
+}
+#heading .discrip {
+    margin-top: 20px;
+}
+.meadia-card {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meadia-card .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    gap: 30px;
+    animation: scroll 20s linear infinite;
+}
+
+/* Animation Add */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.sp-img {
+    width: 130px;
+    height: 50px;
+    filter: grayscale(100%);
+}
+.sp-img:hover {
+    filter: none;
+}
+.sp-img img {
+    width: 100%;
+}
+
+/* Footer Section Start */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--bg-color);
+    padding: 50px;
+}
+
+/* Responsive for mobile device */
+@media screen and (max-width : 576px) {
+html {
+        font-size: 60%;
+    }
+nav , #brand ,#team, #features ,#dashborad {
+    width: 90%;
+    margin: 0 auto;
+    }
+.nav-ul {
+    display: none;
+    }
+.logo {
+    display: block;
+}
+.name {
+    display: none;
+}
+.icon {
+    display: block;
+    font-size: 25px;
+    }
+.discrip {
+    line-height: 20px;
+    }
+#nav ,.details {
+    padding: 20px 0;
+}
+.details , .features {
+    gap: 10px;
+}
+.features {
+    align-items: center;
+}
+.features .discrip {
+    text-align: center;
+}
+.btn {
+    padding: 12px;
+    border-radius: 6px;
+}
+.btn:hover {
+    padding: calc(12px - 1px );
+}
+#team {
+    margin: 50px auto;
+    flex-direction: column;
+    padding: 0;
+}
+.photo-container, .features {
+    width: 100%;
+    }
+.photo .btn {
+    display: none;
+}
+#features .photo , #features .details-2 {
+    width: 100%;
+}
+#features {
+    flex-direction: column-reverse;
+    gap: 50px;
+    margin: 50px auto;
+}
+#dashborad {
+    margin: 50px auto;
+    gap: 50px;
+}
+#dashborad .card {
+    width: 200px;
+    height: 200px;
+}
+#dashborad .card-container {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    padding: 20px;
+}
+
+}
+
+/*Responsive for tablet device  */
+@media screen and (min-width : 576px) and (max-width:1024px) {
+    #team {
+    margin: 50px auto;
+    flex-direction: column;
+    padding: 0;
+}
+
+    .photo-container, .features, .photo , #features .details-2 {
+    width: 100%;
+}
+    .features {
+        text-align: center;
+    }
+    #features {
+        flex-direction: column-reverse;
+    }
+    .photo .btn {
+        display: none;
+    }
+    #dashborad .card-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+}
