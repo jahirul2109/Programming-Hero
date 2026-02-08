@@ -9,21 +9,25 @@
 // }
 // email(mail);
 
-const mail = "j-aadfadfh@email.com"
+// const mail = "j-aadfadfh@email.com"
+const mail = 30
 function email (users) {
-   users = users.toLowerCase();
+    if ( typeof users !== "string") {
+        return "Invalid user"
+    }
     let mailingaddres = "@email.com"
     const unUsedAlfa ='"*$%#()!{}[]||'
     const fristUnuesedAlfa ='"%!(){}[]\|_-*&$#@';
     if (fristUnuesedAlfa.includes(users[0]) || users.includes(" ") || !users.endsWith(mailingaddres)) {
         return "Invalid email"
     } 
+    users = users.toLowerCase();
 
     for (let i = 0; i < users.length; i++) {
         if (unUsedAlfa.includes(users[i]) ) {
             return "Invalid User name "
     }
 }
-return "valid email"
+return true
 }
 console.log (email(mail));
