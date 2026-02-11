@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+
+</head>
+<style>
+    .box {
+        border: 2px solid violet;
+        padding: 15px;;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    #post {
+        background-color: aquamarine;
+        padding: 5px;
+        color: blue;
+        border-radius: 5px;
+        font-weight: bold;
+        margin: 20px;
+    }
+    textarea {
+        margin: 20px;
+    }
+</style>
+<body>
+    <div id="box-container">
+            <p class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum velit id debitis laborum pariatur quasi eligendi necessitatibus, voluptatem quis reiciendis eveniet corrupti provident libero totam impedit quibusdam soluta. Ratione, quo.</p>
+            <p class="box">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum velit id debitis laborum pariatur quasi eligendi necessitatibus, voluptatem quis reiciendis eveniet corrupti provident libero totam impedit quibusdam soluta. Ratione, quo.</p>
+            <p class="box">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum velit id debitis laborum pariatur quasi eligendi necessitatibus, voluptatem quis reiciendis eveniet corrupti provident libero totam impedit quibusdam soluta. Ratione, quo.</p>
+    </div>    
+    <div id="input-box">
+        <textarea name="" cols="50" rows="10" placeholder="Enter Your Comment" id="textArea"></textarea> 
+        <br>
+        <span id="post">Post</span>
+    </div>
+    <script>
+        const boxContainer = document.getElementById('box-container');
+        const commentBox = document.getElementsByClassName('box')
+        const updateCommet = document.getElementById('post');
+        const textArea = document.getElementById('textArea');
+        
+        textArea.addEventListener('keydown', (e)=> {
+            if (e.key == 'Enter') {
+                e.preventDefault();
+                console.log("jahirul")
+            const value = textArea.value;
+            const newBox = document.createElement('p')
+            newBox.innerText = value;
+            newBox.classList.add('box')
+            boxContainer.appendChild(newBox);
+            textArea.value = ""
+            }
+        })
+        
+    </script>
+</body>
+</html>
