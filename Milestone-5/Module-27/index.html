@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Bank</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-700">
+<section id="login" class="bg-gray-100 mx-auto h-lvh my-auto w-2/5 p-10">
+    <header>
+        <img src="assets/Logo-full.png" alt="Login Button" class="logo mx-auto w-2/3">
+<div class="hero">
+  <div class="hero-content w-full flex-col lg:flex-row-reverse">
+    <div class="card bg-base-100 rounded-xl w-full p-10 shrink-0 shadow-2xl">
+      <div class="card-body">
+        <form id="form-btn" class="fieldset">
+          <label for="account" class="label font-bold text-xl text-black">Account Number</label>
+          <input id="account" type="text"   class="input rounded-full outline-0"  value= "018XXXXXXXX" placeholder="Enter Account Number" required />
+          <label for="pin" class="label font-bold text-xl  text-black">Password</label>
+          <input id="pin" type="password" required class="input outline-0 rounded-full" placeholder="Password" />
+          <div><a class="link link-hover">Forgot password?</a></div>
+          <button id="login-btn" type="submit" class="btn btn-neutral mt-4 rounded-full p-6 text-xl bg-blue-700 border-none">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    </header>
+</section>
+<script src="js/login.js"></script>
+</body>
+</html>
