@@ -1,29 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- Daisy Ul link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awosome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body class="bg-slate-700">
-    <main class="login" class="bg-gray-100 mx-auto h-full my-auto md:w-2/5 p-5">
-        <header>
-            <nav class="flex">
+    <header class="border-b border-gray-300 py-5 px-10 bg-white mx-auto  my-auto md:w-2/5">
+        <nav class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-1/7"><img src="assets/logo.png" alt=""></div>
                 <div>
-                  <div class="w-1/3"><img src="assets/logo.png" alt=""></div>  
-                    <div>
-                        <h2>$ <span>4500</span></h2>
-                        <p>Availeavile Belance</p>
+                    <h2 class="font-bold text-xl">$ <span>4500</span></h2>
+                    <p>Availeavile Belance</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn  btn-ghost flex justify-center items-center">
+                    <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
+                    <p>Logout</p>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="bg-gray-100 mx-auto  my-auto md:w-2/5 ">
+        <section id="heading" class="py-3 bg-white px-10">
+            <h2 class="font-bold text-2xl mb-3">Welcome to Pay<span class="text-blue-600">oo</span></h2>
+            <p>Enjoy easy and convenient financial services with us. <br> Cashout charge is low and</p>
+        </section>
+        <section id="card-container" class="grid grid-cols-3  gap-4 bg-white px-10 py-8 rounded-b-3xl">
+            <div id="add-box" class="card w-full h-24 p-3 cursor-pointer active:border-green-600 active:text-green-500 active:bg-green-100  rounded-lg border border-gray-400 justify-center items-center">
+                <img class="w-10" src="assets/opt-1.png" alt="">
+                <p class="font-semibold">Add Mony</p>
+            </div>
+            <div id="cashout-box" class="card w-full h-24 p-3 cursor-pointer active:border-green-600 active:text-green-500 active:bg-green-100  rounded-lg border border-gray-400 justify-center items-center">
+                <img class="w-10" src="assets/opt-2.png" alt="">
+                <p class="font-semibold">Cashout</p>
+            </div>
+            <div id="Transfer-box" class="card w-full h-24 p-3 cursor-pointer active:border-green-600 active:text-green-500 active:bg-green-100  rounded-lg border border-gray-400 justify-center items-center">
+                <img class="w-10" src="assets/opt-3.png" alt="">
+                <p class="font-semibold">Transfer Money</p>
+            </div>
+            <div id="bonus-box"  class="card cursor-not-allowed w-full h-24 p-3 active:border-green-600 active:text-green-500 active:bg-green-100  rounded-lg border border-gray-400 justify-center items-center">
+                <img class="w-10" src="assets/opt-4.png" alt="">
+                <p class="font-semibold">Get Bonus</p>
+            </div>
+            <div id="pay-box" class="card w-full h-24 p-3 cursor-pointer active:border-green-600 active:text-green-500 active:bg-green-100  rounded-lg border border-gray-400 justify-center items-center">
+                <img class="w-10" src="assets/opt-5.png" alt="">
+                <p class="font-semibold">Pay bill</p>
+            </div>
+            <div id="Transactions-box" class="card w-full h-24 cursor-pointer p-3 active:border-green-600 active:text-green-500 active:bg-green-100 rounded-lg border border-gray-400 justify-center items-center">
+                <img class="w-10" src="assets/opt-6.png" alt="">
+                <p class="font-semibold">Transactions</p>
+            </div>
+        </section>
+        <secttion id="add-money" class=" hidden px-10">
+            <h2 class="font-bold text-xl py-5">Add Money</h2>
+            <fieldset id="form-btn" class="fieldset px-8 py-5 rounded-3xl bg-slate-200">
+                <label for="account" class="label font-bold text-xl text-gray-500">Seclect Bank</label>
+                <select class="select select-primary w-full outline-none rounded-full">
+                    <option disabled selected>See Option</option>
+                    <option value="bkash">Bkash</option>
+                    <option value="nogod">Nogod</option>
+                    <option value="rocket">Rocket</option>
+                </select>
+                <label for="pin" class="label font-bold text-xl  text-gray-500">Bank Account Number</label>
+                <input id="pin" type="text" required class="input outline-0 rounded-full w-full"
+                    placeholder="Enter 11 digit account number" />
+                <label for="add-amount" class="label font-bold text-xl  text-gray-500">Amount to Add</label>
+                <input id="add-amount" type="text" required class="input outline-0 rounded-full w-full"
+                    placeholder="Add Amount to withdrwo" />
+                <label for="add-pin" class="label font-bold text-xl  text-gray-500">Pin Number</label>
+                <input id="add-pin" type="password" required class="input outline-0 rounded-full w-full"
+                    placeholder=" Enter 4 digit Pin Number" />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button id="add-btn" type="submit"
+                    class="btn btn-neutral mt-4 rounded-full p-6 text-xl bg-blue-700 border-none">Add Money</button>
+            </fieldset>
+        </secttion>
+        <secttion id="Send-money" class="hidden px-10">
+            <h2 class="font-bold text-xl py-5">Transfer Money</h2>
+            <fieldset id="form-btn" class="fieldset px-8 py-5 rounded-3xl bg-slate-200">
+                <label for="user-number" class="label font-bold text-xl  text-gray-500"> User Account Number</label>
+                <input id="user-number" type="text" required class="input outline-0 rounded-full w-full"
+                    placeholder="Enter 11 digit number" />
+                <label for="send-amount" class="label font-bold text-xl  text-gray-500">Amount</label>
+                <input id="send-amount" type="text" required class="input outline-0 rounded-full w-full"
+                    placeholder="Ener Amount to withdrwo" />
+                <label for="send-pin" class="label font-bold text-xl  text-gray-500">Pin Number</label>
+                <input id="send-pin" type="password" required class="input outline-0 rounded-full w-full"
+                    placeholder=" Enter 4 digit Pin Number" />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button id="send-btn" type="submit"
+                    class="btn btn-neutral mt-4 rounded-full p-6 text-xl bg-blue-700 border-none">Send Now</button>
+            </fieldset>
+        </secttion>
+        <secttion id="cashout" class="hidden px-10">
+            <h2 class="font-bold text-xl py-5">Cashout</h2>
+            <fieldset id="form-btn" class="fieldset px-8 py-5 rounded-3xl bg-slate-200">
+                <label for="agent-number" class="label font-bold text-xl  text-gray-500"> Agent Number</label>
+                <input id="agent-number" type="text" required class="input outline-0 rounded-full w-full"
+                    placeholder="Enter 11 digit number" />
+                <label for="withdrwo-amount" class="label font-bold text-xl  text-gray-500">Amount</label>
+                <input id="withdrwo-amount" type="text" required class="input outline-0 rounded-full w-full"
+                    placeholder="Ener Amount to withdrwo" />
+                <label for="cashout-pin" class="label font-bold text-xl  text-gray-500">Pin Number</label>
+                <input id="cashout-pin" type="password" required class="input outline-0 rounded-full w-full"
+                    placeholder=" Enter 4 digit Pin Number" />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button id="withdrwo-btn" type="submit"
+                    class="btn btn-neutral mt-4 rounded-full p-6 text-xl bg-blue-700 border-none">Withdraw
+                    Money</button>
+            </fieldset>
+        </secttion>
+        <secttion id="pay-bill" class="hidden px-10">
+            <h2 class="font-bold text-xl py-5">Pay bill</h2>
+            <fieldset id="form-btn" class="fieldset px-8 py-5 rounded-3xl bg-slate-200">
+                <label for="account" class="label font-bold text-xl text-gray-500">Select to Pay</label>
+                <select class="select select-primary w-full outline-none rounded-full">
+                    <option disabled selected>Select Back</option>
+                    <option value="bkash">Water bill</option>
+                    <option value="nogod">Electicity Bill</option>
+                    <option value="rocket">Gas Bill</option>
+                </select>
+                <label for="pin" class="label font-bold text-xl  text-gray-500">Biller Account Number</label>
+                <input id="pin" type="text" required class="input outline-0 rounded-full w-full"
+                    placeholder="Enter 11 digit account number" />
+                <label for="pay-amount" class="label font-bold text-xl  text-gray-500">Amount to Pay</label>
+                <input id="pay-amount" type="text" required class="input outline-0 rounded-full w-full"
+                    placeholder="Add Amount to pay" />
+                <label for="pay-pin" class="label font-bold text-xl  text-gray-500">Pin Number</label>
+                <input id="pay-pin" type="password" required class="input outline-0 rounded-full w-full"
+                    placeholder=" Enter 4 digit Pin Number" />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button id="pay-btn" type="submit"
+                    class="btn btn-neutral mt-4 rounded-full p-6 text-xl bg-blue-700 border-none">Pay Now</button>
+            </fieldset>
+        </secttion>
+        <section id="Transactions" class=" hidden px-10 py-5">
+            <div class="flex justify-between py-5">
+                <h1 class="font-bold text-xl"> Transactions History</h1>
+                <button class="btn btn-ghost">
+                    <p class="opacity-60">Veiw all</p>
+                </button>
+            </div>
+            <ul class="list rounded-box flex gap-5">
+                <li class="list-row bg-white  shadow-md ">
+                    <div><img class="size-10 rounded-box" src="assets/opt-5.png" />
                     </div>
-                </div>
-                <div>
-                    <button>Logout</button>
-                </div>
-            </nav>
-        </header>
+                    <div class="list-col-grow">
+                        <div class="font-bold">Electicity Bill</div>
+                        <div class="text-xs  font-semibold opacity-60">Today 1:40 PM</div>
+                    </div>
+                    <button class="btn btn-square btn-ghost">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </li>
+                <li class="list-row bg-white  shadow-md ">
+                    <div><img class="size-10 rounded-box" src="assets/opt-5.png" />
+                    </div>
+                    <div class="list-col-grow">
+                        <div class="font-bold">Education Bill</div>
+                        <div class="text-xs  font-semibold opacity-60">Today 1:40 PM</div>
+                    </div>
+                    <button class="btn btn-square btn-ghost">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </li>
+                <li class="list-row bg-white  shadow-md ">
+                    <div><img class="size-10 rounded-box" src="assets/opt-5.png" />
+                    </div>
+                    <div class="list-col-grow">
+                        <div class="font-bold">Water Bill</div>
+                        <div class="text-xs  font-semibold opacity-60">Today 1:40 PM</div>
+                    </div>
+                    <button class="btn btn-square btn-ghost">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </li>
+                <li class="list-row bg-white  shadow-md">
+                    <div><img class="size-10 rounded-box" src="assets/opt-5.png" />
+                    </div>
+                    <div class="list-col-grow">
+                        <div class="font-bold">Gas Bill</div>
+                        <div class="text-xs  font-semibold opacity-60">Today 1:40 PM</div>
+                    </div>
+                    <button class="btn btn-square btn-ghost">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </li>
+
+            </ul>
+        </section>
+        <section id="difult" class=" px-10 py-5">
+            <div class="flex justify-between py-5">
+                <h1 class="font-bold text-xl">Lastest Payment</h1>
+                <button class="btn btn-ghost">
+                    <p class="opacity-60">Veiw all</p>
+                </button>
+            </div>
+            <ul class="list rounded-box flex gap-5">
+                <li class="list-row bg-white  shadow-md ">
+                    <div><img class="size-10 rounded-box" src="assets/opt-5.png" />
+                    </div>
+                    <div class="list-col-grow">
+                        <div class="font-bold">Electicity Bill</div>
+                        <div class="text-xs  font-semibold opacity-60">Today 1:40 PM</div>
+                    </div>
+                    <button class="btn btn-square btn-ghost">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </li>
+                <li class="list-row bg-white  shadow-md ">
+                    <div><img class="size-10 rounded-box" src="assets/opt-5.png" />
+                    </div>
+                    <div class="list-col-grow">
+                        <div class="font-bold">Education Bill</div>
+                        <div class="text-xs  font-semibold opacity-60">Today 1:40 PM</div>
+                    </div>
+                    <button class="btn btn-square btn-ghost">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </li>
+                <li class="list-row bg-white  shadow-md ">
+                    <div><img class="size-10 rounded-box" src="assets/opt-5.png" />
+                    </div>
+                    <div class="list-col-grow">
+                        <div class="font-bold">Water Bill</div>
+                        <div class="text-xs  font-semibold opacity-60">Today 1:40 PM</div>
+                    </div>
+                    <button class="btn btn-square btn-ghost">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </li>
+                <li class="list-row bg-white  shadow-md">
+                    <div><img class="size-10 rounded-box" src="assets/opt-5.png" />
+                    </div>
+                    <div class="list-col-grow">
+                        <div class="font-bold">Gas Bill</div>
+                        <div class="text-xs  font-semibold opacity-60">Today 1:40 PM</div>
+                    </div>
+                    <button class="btn btn-square btn-ghost">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </li>
+
+            </ul>
+        </section>
     </main>
+    <script src="js/add.js"></script>
 </body>
+
 </html>
