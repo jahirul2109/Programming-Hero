@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Payoo | Home</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <!-- Daisy Ul link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div>
-                <button class="btn  btn-ghost flex justify-center items-center">
+                <button id="logout-btn" class="btn  btn-ghost flex justify-center items-center">
                     <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
                     <p>Logout</p>
                 </button>
@@ -51,7 +51,7 @@
                 <img class="w-10" src="assets/opt-3.png" alt="">
                 <p class="font-semibold">Transfer Money</p>
             </div>
-            <div id="bonus-box"  class="card cursor-not-allowed w-full h-24 p-3 active:border-green-600 active:text-green-500 active:bg-green-100  rounded-lg border border-gray-400 justify-center items-center">
+            <div id="bonus-box" title="Upcomming...." class="card cursor-not-allowed w-full h-24 p-3 active:border-green-600 active:text-green-500 active:bg-green-100  rounded-lg border border-gray-400 justify-center items-center">
                 <img class="w-10" src="assets/opt-4.png" alt="">
                 <p class="font-semibold">Get Bonus</p>
             </div>
@@ -133,14 +133,14 @@
                     <option value="nogod">Electicity Bill</option>
                     <option value="rocket">Gas Bill</option>
                 </select>
-                <label for="pin" class="label font-bold text-xl  text-gray-500">Biller Account Number</label>
-                <input id="pin" type="text" required class="input outline-0 rounded-full w-full"
+                <label for="biller-num" class="label font-bold text-xl  text-gray-500">Biller Account Number</label>
+                <input id="biller-num" type="text" value="01892005337" required class="input outline-0 rounded-full w-full"
                     placeholder="Enter 11 digit account number" />
                 <label for="pay-amount" class="label font-bold text-xl  text-gray-500">Amount to Pay</label>
                 <input id="pay-amount" type="text" required class="input outline-0 rounded-full w-full"
                     placeholder="Add Amount to pay" />
                 <label for="pay-pin" class="label font-bold text-xl  text-gray-500">Pin Number</label>
-                <input id="pay-pin" type="password" required class="input outline-0 rounded-full w-full"
+                <input id="pay-pin" type="password" value="1234" required class="input outline-0 rounded-full w-full"
                     placeholder=" Enter 4 digit Pin Number" />
                 <div><a class="link link-hover">Forgot password?</a></div>
                 <button id="pay-btn" type="submit"
@@ -259,7 +259,7 @@
         </section>
     </main>
     <script src="js/add.js"></script>
-    <script src="js/transaction.js"></script>
+    <script  src="js/transaction.js"></script>
 </body>
 
 </html>

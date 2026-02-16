@@ -7,6 +7,7 @@ function checkingAmount (number) {
    number.target.value = number.target.value.replace(/[^0-9.]/g, "");
 }
 
+
 /**
  * ***********Add Money Section********** 
  */
@@ -100,9 +101,7 @@ cashoutBtn.addEventListener('click', (event) => {
     cashoutAmout.value = '';
 })
 
-/**
- * Send Money Section 
- */
+/****************** Send Money Section********************** */
 const sendUserNumber = document.getElementById('user-number');
 const sendAmount = document.getElementById('send-amount');
 const sendPin = document.getElementById('send-pin');
@@ -114,29 +113,80 @@ sendUserNumber.addEventListener('input', checkingAmount);
 // Check amount 
 sendAmount.addEventListener('input',checkingAmount)
 
-sendBtn.addEventListener ('click', (e)=> {
-    e.preventDefault();
-    const convertedPin = parseInt(sendPin.value);
-    const convertedAmount = parseFloat(sendAmount.value);
-    const convertedDolar = parseFloat(dolar.innerText);
-    const numberValue = sendUserNumber.value;
+
+/**********************Option-1************** */
+// sendBtn.addEventListener ('click', (e)=> {
+//     e.preventDefault();
+//     const convertedPin = parseInt(sendPin.value);
+//     const convertedAmount = parseFloat(sendAmount.value);
+//     const convertedDolar = parseFloat(dolar.innerText);
+//     const numberValue = sendUserNumber.value;
+//     if (numberValue.length !== 11 || numberValue === "") {
+//         alert("Please Provid a valid number")
+//     }
+//     if(sendAmount) {
+//         if(sendPin && convertedPin === 1234) {
+//             if (convertedDolar >= convertedAmount) {
+//                 const sum = convertedDolar - convertedAmount;
+//                 dolar.innerText = sum;
+//             } else {alert ("Not enougt Blance")}
+//         } else {
+//             alert ("Wrong Pin")
+//         }
+//     }  else {
+//         alert("Empty ammount")
+//     }
+//     sendAmount.value ="";
+//     sendPin.value ="";
+//     sendUserNumber.value = "";
+// })
+
+/************Make Function **********/
+function checkingTrasaction (number, amount, mainBlance , pin) {
+    const convertedPin = parseInt(pin.value);
+    const convertedAmount = parseFloat(amount.value);
+    const convertedMain = parseFloat(mainBlance.innerText);
+    const numberValue = number.value;
+
     if (numberValue.length !== 11 || numberValue === "") {
-        alert("Please Provid a valid number")
+        alert ("Please Provid a valid Number")
+    };
+    if (amount) {
+        if (pin.value && convertedPin === 1234) {
+            if (convertedMain >= convertedAmount) {
+                const sum = convertedMain - convertedAmount;
+                mainBlance.innerText = sum;
+            } else {alert("You have Not Enougt Blance")}
+        } else { alert ('Wrong Pin')}
+    } else {
+        alert ("Empty Blance")
     }
-    if(sendAmount) {
-        if(sendPin && convertedPin === 1234) {
-            if (convertedDolar >= convertedAmount) {
-                const sum = convertedDolar - convertedAmount;
-                dolar.innerText = sum;
-            } else {alert ("Not enougt Blance")}
-        } else {
-            alert ("Wrong Pin")
-        }
-    }  else {
-        alert("Empty ammount")
-    }
-    sendAmount.value ="";
-    sendPin.value ="";
-    sendUserNumber.value = "";
+    number.value ="";
+    amount.value="";
+    pin.value = "";
+}
+
+/**************Option-2********** */
+sendBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    checkingTrasaction (sendUserNumber, sendAmount, dolar, sendPin);
+});
+
+
+/**************PAY BILL OPTION********************/
+const billarNum = document.getElementById('biller-num');
+const payAmount = document.getElementById('pay-amount');
+const payPin = document.getElementById("pay-pin");
+billarNum.addEventListener('input', checkingNumber)
+payAmount.addEventListener('input', checkingAmount)
+document.getElementById("pay-btn").addEventListener('click', ()=> {
+    checkingTrasaction(billarNum, payAmount,dolar, payPin);
 })
 
+
+/************Logout button************** */
+document.getElementById('logout-btn').addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log("logout")
+    window.location.href ="./index.html"
+});
