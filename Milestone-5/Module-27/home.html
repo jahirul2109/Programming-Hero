@@ -21,7 +21,7 @@
             <div class="flex items-center gap-3">
                 <div class="w-1/7"><img src="assets/logo.png" alt=""></div>
                 <div>
-                    <h2 class="font-bold text-xl">$ <span>4500</span></h2>
+                    <h2 class="font-bold text-xl">$<span id="dolar">4500</span></h2>
                     <p>Availeavile Belance</p>
                 </div>
             </div>
@@ -74,14 +74,14 @@
                     <option value="nogod">Nogod</option>
                     <option value="rocket">Rocket</option>
                 </select>
-                <label for="pin" class="label font-bold text-xl  text-gray-500">Bank Account Number</label>
-                <input id="pin" type="text" required class="input outline-0 rounded-full w-full"
+                <label for="bank-number" class="label font-bold text-xl  text-gray-500">Bank Account Number</label>
+                <input id="bank-number" type="text" maxlength="11" value="01892005337" required class="input outline-0 rounded-full w-full"
                     placeholder="Enter 11 digit account number" />
                 <label for="add-amount" class="label font-bold text-xl  text-gray-500">Amount to Add</label>
-                <input id="add-amount" type="text" required class="input outline-0 rounded-full w-full"
+                <input id="add-amount" type="text" required value="500" class="input outline-0 rounded-full w-full"
                     placeholder="Add Amount to withdrwo" />
                 <label for="add-pin" class="label font-bold text-xl  text-gray-500">Pin Number</label>
-                <input id="add-pin" type="password" required class="input outline-0 rounded-full w-full"
+                <input id="add-pin" type="password" value="1234" required class="input outline-0 rounded-full w-full"
                     placeholder=" Enter 4 digit Pin Number" />
                 <div><a class="link link-hover">Forgot password?</a></div>
                 <button id="add-btn" type="submit"
@@ -92,13 +92,13 @@
             <h2 class="font-bold text-xl py-5">Transfer Money</h2>
             <fieldset id="form-btn" class="fieldset px-8 py-5 rounded-3xl bg-slate-200">
                 <label for="user-number" class="label font-bold text-xl  text-gray-500"> User Account Number</label>
-                <input id="user-number" type="text" required class="input outline-0 rounded-full w-full"
+                <input id="user-number" type="text" value="01892005337" required class="input outline-0 rounded-full w-full"
                     placeholder="Enter 11 digit number" />
                 <label for="send-amount" class="label font-bold text-xl  text-gray-500">Amount</label>
                 <input id="send-amount" type="text" required class="input outline-0 rounded-full w-full"
                     placeholder="Ener Amount to withdrwo" />
                 <label for="send-pin" class="label font-bold text-xl  text-gray-500">Pin Number</label>
-                <input id="send-pin" type="password" required class="input outline-0 rounded-full w-full"
+                <input id="send-pin" value="1234" type="password" required class="input outline-0 rounded-full w-full"
                     placeholder=" Enter 4 digit Pin Number" />
                 <div><a class="link link-hover">Forgot password?</a></div>
                 <button id="send-btn" type="submit"
@@ -109,13 +109,13 @@
             <h2 class="font-bold text-xl py-5">Cashout</h2>
             <fieldset id="form-btn" class="fieldset px-8 py-5 rounded-3xl bg-slate-200">
                 <label for="agent-number" class="label font-bold text-xl  text-gray-500"> Agent Number</label>
-                <input id="agent-number" type="text" required class="input outline-0 rounded-full w-full"
+                <input id="agent-number" value="01892005337" type="text" required class="input outline-0 rounded-full w-full"
                     placeholder="Enter 11 digit number" />
                 <label for="withdrwo-amount" class="label font-bold text-xl  text-gray-500">Amount</label>
                 <input id="withdrwo-amount" type="text" required class="input outline-0 rounded-full w-full"
                     placeholder="Ener Amount to withdrwo" />
                 <label for="cashout-pin" class="label font-bold text-xl  text-gray-500">Pin Number</label>
-                <input id="cashout-pin" type="password" required class="input outline-0 rounded-full w-full"
+                <input id="cashout-pin" value="1234" type="password" required class="input outline-0 rounded-full w-full"
                     placeholder=" Enter 4 digit Pin Number" />
                 <div><a class="link link-hover">Forgot password?</a></div>
                 <button id="withdrwo-btn" type="submit"
@@ -259,6 +259,7 @@
         </section>
     </main>
     <script src="js/add.js"></script>
+    <script src="js/transaction.js"></script>
 </body>
 
 </html>
