@@ -166,7 +166,7 @@ function checkingTrasaction (number, amount, mainBlance , pin) {
     pin.value = "";
 }
 
-/**************Option-2********** */
+/**************Option-2***************** */
 sendBtn.addEventListener('click', (event) => {
     event.preventDefault();
     checkingTrasaction (sendUserNumber, sendAmount, dolar, sendPin);
