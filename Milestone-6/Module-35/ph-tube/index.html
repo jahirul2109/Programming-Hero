@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-TUBE</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <style>
+        .active {
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <header id="logo" class="w-11/12 flex justify-between items-center py-5 mx-auto border-b-2  border-gray-300">
+        <div>
+            <a href="index.html" class="">
+                <img class="md:w-[120px] w-20" src="ph-tube/assets/Logo.png" alt="logo-png">
+            </a>
+        </div>
+
+        <!-- Search bar -->
+        <div id="searchDiv" class="md:w-fit mx-auto w-4/12">
+            <label class="input outline-none">
+                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                        stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </g>
+                </svg>
+                <input id="searchBar" type="search" required placeholder="Search" class="" />
+            </label>
+        </div>
+        <div>
+            <button class="btn  font-semibold">Sort By Views</button>
+        </div>
+    </header>
+
+    <nav id="navbar" class="flex justify-center gap-5 py-8">
+        <div><button id="btn-all" onclick="loadVideos()" class="btn text-xs md:text-xl font-semibold">All</button></div>
+    </nav>
+
+    <!-- Loading Setion  -->
+    <section id="loaderBar" class="text-center text-2xl hidden">
+        <span class="loading loading-dots  loading-xl"></span>
+    </section>
+
+    <!-- Video section  -->
+    <section id="videoscontainer"
+        class="grid md:grid-cols-3 lg:grid-cols-3 grid-cols-1 px-3 md:mb-10 mb-5  md:px-0 md:w-11/12 mx-auto gap-10 ">
+    </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal" class="modal">
+        <div class="modal-box">
+            <div id="detailsContainer">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+
+</html>
