@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Toggle from './Toggle.jsx'
 import Userdata from './Userdata.jsx'
-import AllCountries from './countries/AllCountries.jsx'
+import AllCountries from './AllCountries.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -12,5 +12,5 @@ createRoot(document.getElementById('root')).render(
     <Toggle></Toggle>
     <Userdata></Userdata> */}
     <AllCountries></AllCountries>
-  </StrictMode>,
+  </StrictMode>
 )
